@@ -1,0 +1,10 @@
+
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category, collection: Restaurant::CATEGORY, include_blank: false %>
+  <%= f.input :rating %>
+  <% unless @restaurant.id %>
+  <% end %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
